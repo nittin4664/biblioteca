@@ -51,9 +51,15 @@ public class book {
     public boolean searchbook(String book)
     {
         if(book.equals(name))
-        return true;
+        {
+            System.out.println("Book found");
+            return true;
+        }
         else
-        return false;
+        {
+            System.out.println("book unavailable");
+            return false;
+        }
     }
 }
 

@@ -45,7 +45,7 @@ public class testbook {
 
 
     @Test
-    // to test reservation of book
+    // to test search of book
     public void testsearchbook()
     {
         String book="ac";

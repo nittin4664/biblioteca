@@ -16,6 +16,20 @@ public class option {
     }
 
     public int getoption() {
-        return option;  //To change body of created methods use File | Settings | File Templates.
+        return option;  //return value of option
     }
+
+       public boolean testoption1to6()
+       {
+        if(option>0&&option<7)
+        {
+
+            return true;
+        }
+        else
+        {
+
+              return false;//check the limits of options
+        }
+       }
 }
