@@ -33,5 +33,20 @@ public class book {
     }
 
 
+    public String reservebook()
+    {
+       String s;
+       if(count>0)
+       {   s="Book has been reserved";
+           count--;
+       }
+        else
+       {
+         s="Book has not been reserved";
+       }
+        return s;
+    }
+
 }
+
 
