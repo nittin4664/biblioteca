@@ -26,4 +26,12 @@ public class book {
     {
         return count;
     }
+
+    public String viewbook() //returns string to be displayed
+    {
+          return name+"\t"+count;
+    }
+
+
 }
+

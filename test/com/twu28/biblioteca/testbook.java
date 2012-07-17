@@ -27,6 +27,13 @@ public class testbook {
             assertEquals(1,new book("ac",1).getcount());
         }
 
+    @Test
+    // to test display or view book option
+    public void testviewbook()
+    {
+        assertEquals("ac\t1",new book("ac",1).viewbook());
+    }
+
 
 
 
