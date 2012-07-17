@@ -47,6 +47,14 @@ public class book {
         return s;
     }
 
+
+    public boolean searchbook(String book)
+    {
+        if(book.equals(name))
+        return true;
+        else
+        return false;
+    }
 }
 
 

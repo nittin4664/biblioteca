@@ -40,11 +40,17 @@ public class testbook {
     // to test reservation of book
     public void testreservebook()
     {
-        assertEquals("Book has been reserved",new book("ac",0).reservebook());
+        assertEquals("Book has been reserved",new book("ac",1).reservebook());
     }
 
 
-
+    @Test
+    // to test reservation of book
+    public void testsearchbook()
+    {
+        String book="ac";
+        assertEquals(true,new book("ac",1).searchbook(book));
+    }
 
 
 }
