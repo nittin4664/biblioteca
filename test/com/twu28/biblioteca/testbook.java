@@ -49,7 +49,7 @@ public class testbook {
     public void testsearchbook()
     {
         String book="ac";
-        assertEquals(true,new book("ac",1).searchbook(book));
+        assertEquals( true,new book("ac",1).searchbook(book));
     }
 
 

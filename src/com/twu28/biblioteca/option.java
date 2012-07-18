@@ -19,17 +19,17 @@ public class option {
         return option;  //return value of option
     }
 
-       public boolean testoption1to6()
+       public String testoption1to6()
        {
         if(option>0&&option<7)
         {
 
-            return true;
+            return "you have selected option"+option;
         }
         else
         {
 
-              return false;//check the limits of options
+              return "option does not exist.....plz try again";//check the limits of options
         }
        }
 }

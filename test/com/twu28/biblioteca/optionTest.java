@@ -28,7 +28,8 @@ public class optionTest
     //test if option lies b/w 1-6
      public void  testoption()
     {
-        assertEquals(true, new option(1).testoption1to6());
+        int option=1;
+        assertEquals(new option(option).testoption1to6(),"you have selected option"+option);
     }
 
 }

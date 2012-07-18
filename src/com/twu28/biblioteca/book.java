@@ -52,15 +52,16 @@ public class book {
     {
         if(book.equals(name))
         {
-            System.out.println("Book found");
+
             return true;
         }
         else
         {
-            System.out.println("book unavailable");
+
             return false;
         }
     }
+
 }
 
 
