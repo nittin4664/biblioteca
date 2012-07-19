@@ -22,7 +22,7 @@ public class movie {
     {
         name=a;
         director=b;
-        rating=null;
+        rating=" ";
     }
 
     public String getname() {

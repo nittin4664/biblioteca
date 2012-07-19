@@ -67,7 +67,7 @@ public class library {
 
     public String moviedisplay(movie mv) {
 
-        return mv.getname()+" \t "+mv.director+" \t "+rating(mv.getrating());
+        return mv.getname()+" \t "+mv.getdirector()+" \t "+rating(mv.getrating());
     }
 }
 

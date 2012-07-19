@@ -51,17 +51,17 @@ public class libraryTest  {
     }
     @Test
     // test if ration is b/w 1 and 10
-    public  void testrating()
+    public  void testrating1to10()
     {
 
         assertEquals("1",new library().rating("1") );
     }
     @Test
-    // test if ration is b/w 1 and 10
+    // test movie display function
     public  void testmoviedisplay()
     {
         movie mv=new movie("a","b","1");
-        assertEquals("1",new library().moviedisplay(mv) );
+        assertEquals("a \t b \t 1",new library().moviedisplay(mv));
     }
 
 }
