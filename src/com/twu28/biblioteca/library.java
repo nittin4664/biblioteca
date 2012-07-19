@@ -57,5 +57,12 @@ public class library {
         }
         return s;
     }
+
+    public String rating(movie mv) {
+        if("1".equals(mv.getrating())||"2".equals(mv.getrating())||"3".equals(mv.getrating())||"4".equals(mv.getrating())||"5".equals(mv.getrating())||"6".equals(mv.getrating())||"7".equals(mv.getrating())||"8".equals(mv.getrating())||"9".equals(mv.getrating())||"10".equals(mv.getrating()))
+            return mv.getrating();
+        else
+            return "N/A";
+    }
 }
 

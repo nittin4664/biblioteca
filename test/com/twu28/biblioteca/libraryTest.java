@@ -49,6 +49,13 @@ public class libraryTest  {
         book bi=new book("abc",2);
         assertEquals( "Book abc has been reserved",new library().reservebook(bi));
     }
+    @Test
+    // test if ration is b/w 1 and 10
+    public  void testrating()
+    {
+        movie mv=new movie("a","b","1");
+        assertEquals("1",new library().rating(mv) );
+    }
 
 
 }

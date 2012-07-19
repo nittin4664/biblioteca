@@ -12,10 +12,17 @@ public class movie {
    String name;
    String director;
    String rating;
-    public movie(String a, String b, String c) {
+    public movie(String a, String b, String c)
+    {
         name=a;
         director=b;
         rating=c;
+    }
+    public movie(String a, String b)
+    {
+        name=a;
+        director=b;
+        rating=null;
     }
 
     public String getname() {
@@ -26,7 +33,7 @@ public class movie {
         return  director;
     }
 
-    public String getration() {
+    public String getrating() {
         return  rating;
     }
 }

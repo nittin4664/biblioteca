@@ -29,6 +29,6 @@ public class testmovie {
     //to test the display movie function
     public void testgetration()
     {
-        assertEquals("1",new movie("a","b","1").getration());
+        assertEquals("1",new movie("a","b").getrating());
     }
 }
