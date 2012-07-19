@@ -19,5 +19,10 @@ public class testmovie {
     {
         assertEquals("a",new movie("a","b","1").getname());
     }
-
+    @Test
+    //to test the display movie function
+    public void testgetdiretor()
+    {
+        assertEquals("b",new movie("a","b","1").getdirector());
+    }
 }

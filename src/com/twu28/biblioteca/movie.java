@@ -20,4 +20,8 @@ public class movie {
     public String getname() {
         return name;
     }
+
+    public String getdirector() {
+        return  director;
+    }
 }
