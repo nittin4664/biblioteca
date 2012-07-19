@@ -1,6 +1,8 @@
 package com.twu28.biblioteca;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,5 +11,17 @@ import junit.framework.TestCase;
  * Time: 5:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public class libraryTest extends TestCase {
+public class libraryTest  {
+
+    @Test
+    // to test display  book
+    public void testdisplayhbook()
+    {
+
+        book bi=new book("abc",3);
+        assertEquals("abc \t 3", new library().displaybook( bi));
+    }
+
+
+
 }
