@@ -24,7 +24,7 @@ public class menu {
             Scanner in = new Scanner(System.in);
             opt = in.nextInt();
             option op=new option(opt);
-             library lib=new library();
+            library lib=new library();
          if(op.testoption1to6())
          {
         switch(opt) // displaying a option using switch case
@@ -47,7 +47,7 @@ public class menu {
                 System.out.println("enter the name of the book to be reserved");
                 Scanner in1 = new Scanner(System.in);
                 String s = in1.nextLine();
-                System.out.println(lib.reservebook(bi,s));
+                System.out.println(lib.takebook(bi,s));
 
                 break;
 

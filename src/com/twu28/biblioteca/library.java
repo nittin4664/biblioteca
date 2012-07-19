@@ -26,7 +26,7 @@ public class library {
 
 
 
-    public String reservebook(book[] buk,String s) {
+    public String takebook(book[] buk,String s) {
         int flag=0;
         int pos=0;
         for(int i = 0;i<buk.length;i++)
@@ -38,13 +38,13 @@ public class library {
             }
         }
         if(flag==1)
-            return "book found...."+takebook(buk[pos]);
+            return "book found...."+reservebook(buk[pos]);
         else
             return "Book not found";
 
     }
 
-    public String takebook(book bi)
+    public String reservebook(book bi)
     {
         String s;
         if(bi.getcount()>0)
