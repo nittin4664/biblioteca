@@ -10,58 +10,44 @@ import java.util.Scanner;
  * To change this template use File | Settings | File Templates.
  */
 public class menu {
-    int option;
-    public menu(int op )
-    {
-        option=op;
-    }
-    public  void display()
+
+    public  static void main(String arg[])
     {
         book bi[]=new book[3];
         bi[0]=new book("abc",3);
         bi[1]=new book("def",4);
         bi[2]=new book("xyz",0);
-
-        // assigning vales to movies
-        movie mv[]=new movie[15];
-        mv[0]=new movie("movie0","director0","4");
-        mv[1]=new movie("movie1","director1","6");
-        mv[2]=new movie("movie2","director2","4");
-        mv[3]=new movie("movie3","director3","7");
-        mv[4]=new movie("movie4","director4","b");//alphabet  passed should give N/A
-        mv[5]=new movie("movie5","director5");//nothing  passed should give N/A
-        mv[6]=new movie("movie6","director6","11"); //rating out of bounce should give N/A
-        mv[7]=new movie("movie7","director7","9");
-        mv[8]=new movie("movie8","director8","4");
-        mv[9]=new movie("movie9","director9","8");
-        mv[10]=new movie("movie10","director10");
-        mv[11]=new movie("movie11","director11");
-        mv[12]=new movie("movie12","director12","5");
-        mv[13]=new movie("movie13","director13");
-        mv[14]=new movie("movie14","director14","10");
-
-        switch(option) // displaying a option using switch case
+        int opt;
+        while(true)
+        {
+            System.out.println("enter one of the options\n 1:login  \n 2:view movies \n 3:view books \n 4:reserve book \n 5:library no \n 6:exit ");
+            Scanner in = new Scanner(System.in);
+            opt = in.nextInt();
+            option op=new option(opt);
+             library lib=new library();
+         if(op.testoption1to6())
+         {
+        switch(opt) // displaying a option using switch case
         {
             case 1: System.out.println("you have selected login");
                                break;
             case 2: System.out.println("you have selected to view movies");
-                for(int i=0;i<mv.length;i++)
-                    System.out.println(mv[i].display());
+
                 break;
             case 3:System.out.println("you have selected to view books");
                 System.out.println("name \t count");
-                for(int i=0;i<bi.length;i++)
-                    System.out.println(bi[i].viewbook());
+                for(int i = 0;i<bi.length;i++)
+                {
+                    System.out.println(lib.displaybook(bi[i]));
+                }
+
                 break;
 
             case 4: System.out.println("you have selected to reserve a book");
-                System.out.println("enter the book name to be reserved");
-                Scanner in = new Scanner(System.in);
-                String book = in.nextLine();
-                for(int i=0;i<bi.length;i++)
-                {
-                    System.out.println(bi[i].searchbook(book));
-                }
+                System.out.println("enter the name of the book to be reserved");
+                Scanner in1 = new Scanner(System.in);
+                String s = in1.nextLine();
+                System.out.println(lib.reservebook(bi,s));
 
                 break;
 
@@ -74,6 +60,8 @@ public class menu {
             default:
                 System.out.println("you have selected a wrong option");
         }
+         }
 
+    }
     }
 }
