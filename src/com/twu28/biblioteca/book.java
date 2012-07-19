@@ -42,25 +42,24 @@ public class book {
        }
         else
        {
-         s="Book has not been reserved";
+         s="Book out of stock";
        }
         return s;
     }
 
 
-    public boolean searchbook(String book)
+    public String searchbook(String book)
     {
+
         if(book.equals(name))
-        {
 
-            return true;
-        }
+          return "book present..."+reservebook();
+
         else
-        {
+            return "book not present";
 
-            return false;
-        }
     }
+
 
 }
 

@@ -39,8 +39,7 @@ public class menu {
                 String book = in.nextLine();
                 for(int i=0;i<bi.length;i++)
                 {
-                    if(bi[i].searchbook(book))
-                        System.out.println(bi[i].reservebook());
+                    System.out.println(bi[i].searchbook(book));
                 }
 
                 break;
