@@ -26,7 +26,23 @@ public class library {
 
 
 
+    public String reservebook(book[] buk,String s) {
+        int flag=0;
+        int pos=0;
+        for(int i = 0;i<buk.length;i++)
+        {
+            if(searchbook(buk[i], s))
+            {
+                flag=1;
+                pos=i;
+            }
+        }
+        if(flag==1)
+            return "book found...."+takebook(buk[pos]);
+        else
+            return "Book not found";
 
+    }
 
     public String takebook(book bi)
     {

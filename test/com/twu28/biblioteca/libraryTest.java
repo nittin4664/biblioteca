@@ -31,7 +31,15 @@ public class libraryTest  {
         assertEquals( true,new library().searchbook(bi,s));
     }
 
+    @Test
+    // to test search of book
+    public void testresevebook()
+    {
 
+        book bi[]=new book[1];
+        bi[0]=new book("abc",2);
+        assertEquals( "book found....Book abc has been reserved",new library().reservebook(bi,"abc"));
+    }
 
     @Test
     // to test search of book
