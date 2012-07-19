@@ -29,7 +29,7 @@ public class optionTest
      public void  testoption()
     {
         int option=1;
-        assertEquals(new option(option).testoption1to6(),"you have selected option"+option);
+        assertEquals(new option(option).testoption1to6(),true);
     }
 
 }

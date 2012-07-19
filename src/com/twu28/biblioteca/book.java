@@ -27,38 +27,9 @@ public class book {
         return count;
     }
 
-    public String viewbook() //returns string to be displayed
-    {
-          return name+"\t"+count;
-    }
 
 
-    public String reservebook()
-    {
-       String s;
-       if(count>0)
-       {   s="Book has been reserved";
-           count--;
-       }
-        else
-       {
-         s="Book out of stock";
-       }
-        return s;
-    }
 
-
-    public String searchbook(String book)
-    {
-
-        if(book.equals(name))
-
-          return "book present..."+reservebook();
-
-        else
-            return "book not present";
-
-    }
 
 
 }
