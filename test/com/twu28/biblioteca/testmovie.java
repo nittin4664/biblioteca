@@ -14,15 +14,21 @@ import static org.junit.Assert.assertEquals;
 public class testmovie {
 
     @Test
-    //to test the display movie function
+    //to test the getname function
     public void testgetname()
     {
         assertEquals("a",new movie("a","b","1").getname());
     }
     @Test
-    //to test the display movie function
+    //to test the getdirector function
     public void testgetdiretor()
     {
         assertEquals("b",new movie("a","b","1").getdirector());
+    }
+    @Test
+    //to test the display movie function
+    public void testgetration()
+    {
+        assertEquals("1",new movie("a","b","1").getration());
     }
 }
