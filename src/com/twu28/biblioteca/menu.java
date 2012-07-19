@@ -28,9 +28,9 @@ public class menu {
         mv[1]=new movie("movie1","director1","6");
         mv[2]=new movie("movie2","director2","4");
         mv[3]=new movie("movie3","director3","7");
-        mv[4]=new movie("movie4","director4","2");
-        mv[5]=new movie("movie5","director5");
-        mv[6]=new movie("movie6","director6","10");
+        mv[4]=new movie("movie4","director4","b");//alphabet  passed should give N/A
+        mv[5]=new movie("movie5","director5");//nothing  passed should give N/A
+        mv[6]=new movie("movie6","director6","11"); //rating out of bounce should give N/A
         mv[7]=new movie("movie7","director7","9");
         mv[8]=new movie("movie8","director8","4");
         mv[9]=new movie("movie9","director9","8");

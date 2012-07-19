@@ -29,8 +29,8 @@ public class movie {
 
     public String rating()
     {
-       int ratin=Integer.parseInt(rating);
-        if(ratin>0&&ratin<11)
+
+        if(rating.equals("1")||rating.equals("2")||rating.equals("3")||rating.equals("4")||rating.equals("5")||rating.equals("6")||rating.equals("7")||rating.equals("8")||rating.equals("9")||rating.equals("10"))
             return rating;
         else
             return "N/A";

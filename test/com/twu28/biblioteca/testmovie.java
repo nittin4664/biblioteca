@@ -17,7 +17,7 @@ public class testmovie {
     //to test the display movie function
     public void testdisplay()
     {
-        assertEquals("a\tb\tN/A",new movie("a","b").display());
+        assertEquals("a\tb\t1",new movie("a","b","1").display());
     }
     @Test
     public  void testrating()
