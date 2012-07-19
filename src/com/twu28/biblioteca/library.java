@@ -16,5 +16,15 @@ public class library {
         }
     }
 
+    public boolean searchbook(book buk,String s)
+    {
+         if(s.equals(buk.getname()))
+             return true;
+        else
+             return false;
+    }
+
+
+
 }
 

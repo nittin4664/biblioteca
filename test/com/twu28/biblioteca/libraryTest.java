@@ -22,6 +22,15 @@ public class libraryTest  {
         assertEquals("abc \t 3", new library().displaybook( bi));
     }
 
+    @Test
+    // to test search of book
+    public void testsearchbook()
+    {
+        String s="abc";
+        book bi=new book("abc",3);
+        assertEquals( true,new library().searchbook(bi,s));
+    }
+
 
 
 }
