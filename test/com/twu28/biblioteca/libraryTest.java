@@ -33,4 +33,14 @@ public class libraryTest  {
 
 
 
+    @Test
+    // to test search of book
+    public void testtakebook()
+    {
+
+        book bi=new book("abc",2);
+        assertEquals( "Book abc has been reserved",new library().takebook(bi));
+    }
+
+
 }

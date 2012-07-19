@@ -26,5 +26,20 @@ public class library {
 
 
 
+
+
+    public String takebook(book bi)
+    {
+        String s;
+        if(bi.getcount()>0)
+        {   s="Book "+bi.getname()+" has been reserved";
+            bi.count--;
+        }
+        else
+        {
+            s="Book "+bi.getname()+" out of stock";
+        }
+        return s;
+    }
 }
 
