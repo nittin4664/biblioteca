@@ -38,7 +38,18 @@ public class menu {
         mv[12]=new movie("a13","b13","8");
         mv[13]=new movie("a14","b14");
         mv[14]=new movie("a15","b15","5");
-        int opt;
+
+
+        //customer initialization
+        customer cus[]=new customer[2];
+        cus[0]=new customer("library","password");
+        cus[1]=new customer("nitin","abc");
+
+
+        int opt; //to select an option
+
+        String permission=null; //to give permission
+
         while(true)
         {
             System.out.println("enter one of the options\n 1:login  \n 2:view movies \n 3:view books \n 4:reserve book \n 5:library no \n 6:exit ");
@@ -57,7 +68,13 @@ public class menu {
                 System.out.println("enter password>>");
                 Scanner in2 = new Scanner(System.in);
                 String password = in2.nextLine();
-                               break;
+                permission=lib.customerlogin(cus,username,password) ;
+                if(permission!=null)
+                    System.out.println("login successful");
+                else
+                    System.out.println("Please try again");
+                break;
+
             case 2: System.out.println("you have selected to view movies");
                 System.out.println("Name  Director  Rating");
                 for(int i = 0;i<mv.length;i++)
@@ -83,6 +100,10 @@ public class menu {
                 break;
 
             case 5: System.out.println("you have selected to check library no");
+                if(permission!=null)
+                    System.out.println("library no is"+permission);
+                else
+                    System.out.println("Please talk to your Librarian");
                 break;
 
             case 6: System.out.println("you have selected to exit");

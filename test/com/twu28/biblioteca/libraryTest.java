@@ -67,9 +67,10 @@ public class libraryTest  {
     // test movie display function
     public  void testcustomerlogin()
     {
-        customer cus[]=new customer[1];
-        cus[0]=new customer("a","b");
-        assertEquals("111-1111",new library().customerlogin(cus,"111-1111","b"));
+        customer cus[]=new customer[2];
+        cus[0]=new customer("1","b");
+        cus[1]=new customer("2","c");
+        assertEquals("111-1112",new library().customerlogin(cus,"111-1112","c"));
     }
 
 }
