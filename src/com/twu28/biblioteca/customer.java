@@ -34,4 +34,9 @@ public class customer {
     public String getpassword() {
     return password;
     }
+
+    public String getusername()
+    {
+            return username;
+    }
 }

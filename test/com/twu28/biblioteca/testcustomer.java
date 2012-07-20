@@ -14,24 +14,31 @@ import static org.junit.Assert.assertEquals;
 public class testcustomer {
 
     @Test
-    //
+    //  test getname
     public void testgetname()
     {
 
         assertEquals("xyz",new customer("xyz","acb").getname());
     }
     @Test
-    //
+    //   test setusername
     public void teststusername()
     {
 
         assertEquals("111-1113",new customer("xyz","acb").setusername());
     }
     @Test
-    //
+    //  test getpassword
     public void testgetpassword()
     {
 
         assertEquals("acb",new customer("xyz","acb").getpassword());
+    }
+    @Test
+    //  test getpassword
+    public void testgetusername()
+    {
+
+        assertEquals("111-1111",new customer("xyz","acb").getusername());
     }
 }

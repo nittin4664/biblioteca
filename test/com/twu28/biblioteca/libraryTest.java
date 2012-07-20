@@ -63,5 +63,13 @@ public class libraryTest  {
         movie mv=new movie("a","b","1");
         assertEquals("a \t b \t 1",new library().moviedisplay(mv));
     }
+    @Test
+    // test movie display function
+    public  void testcustomerlogin()
+    {
+        customer cus[]=new customer[1];
+        cus[0]=new customer("a","b");
+        assertEquals("111-1111",new library().customerlogin(cus,"111-1111","b"));
+    }
 
 }

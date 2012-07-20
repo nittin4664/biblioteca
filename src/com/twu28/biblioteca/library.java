@@ -1,6 +1,8 @@
 package com.twu28.biblioteca;
 
 
+import java.util.Scanner;
+
 /**
  * Created with IntelliJ IDEA.
  * User: NITIN
@@ -68,6 +70,23 @@ public class library {
     public String moviedisplay(movie mv) {
 
         return mv.getname()+" \t "+mv.getdirector()+" \t "+rating(mv.getrating());
+    }
+
+    public String customerlogin(customer[] cus,String username,String password) {
+        int pos=0;
+        int flag=0;
+
+        for(int i=0;i<cus.length;i++)
+        {
+            if(username.equals(cus[i].getusername())&&password.equals(cus[i].getpassword()))
+            {  pos=i; flag=1;  }
+
+        }
+        if(flag==1)
+            return cus[pos].username;
+            else
+            return null;
+
     }
 }
 

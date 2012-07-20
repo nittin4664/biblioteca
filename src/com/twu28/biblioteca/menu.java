@@ -51,6 +51,12 @@ public class menu {
         switch(opt) // displaying a option using switch case
         {
             case 1: System.out.println("you have selected login");
+                System.out.println("enter username>>");
+                Scanner in1 = new Scanner(System.in);
+                String username = in1.nextLine();
+                System.out.println("enter password>>");
+                Scanner in2 = new Scanner(System.in);
+                String password = in2.nextLine();
                                break;
             case 2: System.out.println("you have selected to view movies");
                 System.out.println("Name  Director  Rating");
@@ -70,8 +76,8 @@ public class menu {
 
             case 4: System.out.println("you have selected to reserve a book");
                 System.out.println("enter the name of the book to be reserved");
-                Scanner in1 = new Scanner(System.in);
-                String s = in1.nextLine();
+                Scanner in4 = new Scanner(System.in);
+                String s = in4.nextLine();
                 System.out.println(lib.takebook(bi,s));
 
                 break;
