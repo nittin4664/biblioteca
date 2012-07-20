@@ -12,11 +12,20 @@ import static org.junit.Assert.assertEquals;
  * To change this template use File | Settings | File Templates.
  */
 public class testcustomer {
+
     @Test
     //
-    public void getname()
+    public void testgetname()
     {
 
         assertEquals("xyz",new customer("xyz","acb").getname());
     }
+    @Test
+    //
+    public void teststusername()
+    {
+
+        assertEquals("111-1112",new customer("xyz","acb").setusername());
+    }
+
 }

@@ -15,11 +15,19 @@ public class customer {
     public customer(String s1, String s2) {
         name=s1;
         password=s2;
+        username=setusername();
 
     }
 
     public String getname()
     {
          return name;
+    }
+
+    public String setusername()
+    {
+       String s=Integer.toString(autoinc++);
+       s = s.substring(0, 3) + "-" + s.substring(3, s.length());
+        return s;
     }
 }
