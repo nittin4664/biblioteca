@@ -25,7 +25,13 @@ public class testcustomer {
     public void teststusername()
     {
 
-        assertEquals("111-1112",new customer("xyz","acb").setusername());
+        assertEquals("111-1113",new customer("xyz","acb").setusername());
     }
+    @Test
+    //
+    public void testgetpassword()
+    {
 
+        assertEquals("acb",new customer("xyz","acb").getpassword());
+    }
 }

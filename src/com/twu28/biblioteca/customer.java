@@ -30,4 +30,8 @@ public class customer {
        s = s.substring(0, 3) + "-" + s.substring(3, s.length());
         return s;
     }
+
+    public String getpassword() {
+    return password;
+    }
 }
