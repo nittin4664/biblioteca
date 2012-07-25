@@ -8,6 +8,7 @@ package com.twu28.biblioteca;
  * To change this template use File | Settings | File Templates.
  */
 public class customer {
+    private
     static int autoinc=1111111;
     String username;
     String password;

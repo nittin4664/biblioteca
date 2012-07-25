@@ -11,8 +11,8 @@ public class movie {
    private
    String name;
    String director;
-   String rating;
-    public movie(String a, String b, String c)
+   int rating;
+    public movie(String a, String b, int c)
     {
         name=a;
         director=b;
@@ -22,7 +22,7 @@ public class movie {
     {
         name=a;
         director=b;
-        rating=" ";
+        rating=0;
     }
 
     public String getname() {
@@ -34,6 +34,11 @@ public class movie {
     }
 
     public String getrating() {
-        return  rating;
+        if(rating>0&&rating<11)
+        return  Integer.toString(rating);
+        else
+        return "N/A";
     }
+
+
 }

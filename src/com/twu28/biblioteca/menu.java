@@ -11,54 +11,14 @@ import java.util.Scanner;
  */
 public class menu {
 
-    public  static void main(String arg[])
+    public void menudisplay()
+    {
+       System.out.println("enter one of the options\n 1:login  \n 2:view movies \n 3:view books \n 4:reserve book \n 5:library no \n 6:exit ");
+    }
+
+    public void menuselected(int opt,book [] bi,movie [] mv,customer [] cus,library lib)
     {
 
-        //values for book class
-        book bi[]=new book[3];
-        bi[0]=new book("abc",3);
-        bi[1]=new book("def",4);
-        bi[2]=new book("xyz",0);
-
-
-        //values for movie class
-        movie mv[]=new movie[15];
-        mv[0]=new movie("a1","b1","6");
-        mv[1]=new movie("a2","b2");
-        mv[2]=new movie("a3","b3","10");
-        mv[3]=new movie("a4","b4","11");
-        mv[4]=new movie("a5","b5","1");
-        mv[5]=new movie("a6","b6","c");
-        mv[6]=new movie("a7","b7","2");
-        mv[7]=new movie("a8","b8");
-        mv[8]=new movie("a9","b9","9");
-        mv[9]=new movie("a10","b10","4");
-        mv[10]=new movie("a11","b11","11");
-        mv[11]=new movie("a12","b12","2");
-        mv[12]=new movie("a13","b13","8");
-        mv[13]=new movie("a14","b14");
-        mv[14]=new movie("a15","b15","5");
-
-
-        //customer initialization
-        customer cus[]=new customer[2];
-        cus[0]=new customer("library","password");
-        cus[1]=new customer("nitin","abc");
-
-
-        int opt; //to select an option
-
-        String permission=null; //to give permission
-
-        while(true)
-        {
-            System.out.println("enter one of the options\n 1:login  \n 2:view movies \n 3:view books \n 4:reserve book \n 5:library no \n 6:exit ");
-            Scanner in = new Scanner(System.in);
-            opt = in.nextInt();
-            option op=new option(opt);
-            library lib=new library();
-         if(op.testoption1to6())
-         {
         switch(opt) // displaying a option using switch case
         {
             case 1: System.out.println("you have selected login");
@@ -68,8 +28,8 @@ public class menu {
                 System.out.println("enter password>>");
                 Scanner in2 = new Scanner(System.in);
                 String password = in2.nextLine();
-                permission=lib.customerlogin(cus,username,password) ;
-                if(permission!=null)
+                lib.setpermission(lib.customerlogin(cus,username,password)) ;
+                if(lib.getpermission()!=null)
                     System.out.println("login successful");
                 else
                     System.out.println("Please try again");
@@ -92,16 +52,20 @@ public class menu {
                 break;
 
             case 4: System.out.println("you have selected to reserve a book");
+                if(lib.getpermission()!=null)
+                {
                 System.out.println("enter the name of the book to be reserved");
                 Scanner in4 = new Scanner(System.in);
                 String s = in4.nextLine();
                 System.out.println(lib.takebook(bi,s));
-
+                }
+                else
+                    System.out.println("Not logged in....... login to reserve a book ");
                 break;
 
             case 5: System.out.println("you have selected to check library no");
-                if(permission!=null)
-                    System.out.println("library no is"+permission);
+                if(lib.getpermission()!=null)
+                    System.out.println("library no is"+lib.getpermission());
                 else
                     System.out.println("Please talk to your Librarian");
                 break;
@@ -112,8 +76,8 @@ public class menu {
             default:
                 System.out.println("you have selected a wrong option");
         }
-         }
+    }
 
-    }
-    }
-}
+ }
+
+

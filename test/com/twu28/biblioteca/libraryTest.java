@@ -23,6 +23,15 @@ public class libraryTest  {
     }
 
     @Test
+    // to test get permission  book
+    public void testgetpermission()
+    {
+
+        book bi=new book("abc",3);
+        assertEquals("aba", new library().getpermission());
+    }
+
+    @Test
     // to test search of book
     public void testsearchbook()
     {
@@ -49,18 +58,12 @@ public class libraryTest  {
         book bi=new book("abc",2);
         assertEquals( "Book abc has been reserved",new library().reservebook(bi));
     }
-    @Test
-    // test if ration is b/w 1 and 10
-    public  void testrating1to10()
-    {
 
-        assertEquals("1",new library().rating("1") );
-    }
     @Test
     // test movie display function
     public  void testmoviedisplay()
     {
-        movie mv=new movie("a","b","1");
+        movie mv=new movie("a","b",1);
         assertEquals("a \t b \t 1",new library().moviedisplay(mv));
     }
     @Test

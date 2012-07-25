@@ -11,6 +11,8 @@ import java.util.Scanner;
  * To change this template use File | Settings | File Templates.
  */
 public class library {
+    private
+    String permission=null;
 
     public String displaybook(book buk) {
         {
@@ -49,9 +51,9 @@ public class library {
     public String reservebook(book bi)
     {
         String s;
-        if(bi.getcount()>0)
+        if(bi.available())
         {   s="Book "+bi.getname()+" has been reserved";
-            bi.count--;
+            bi.reducebook();
         }
         else
         {
@@ -60,16 +62,11 @@ public class library {
         return s;
     }
 
-    public String rating(String s) {
-        if(s.equals("1")||s.equals("2")||s.equals("3")||s.equals("4")||s.equals("5")||s.equals("6")||s.equals("7")||s.equals("8")||s.equals("9")||s.equals("10"))
-            return s;
-        else
-            return "N/A";
-    }
+
 
     public String moviedisplay(movie mv) {
 
-        return mv.getname()+" \t "+mv.getdirector()+" \t "+rating(mv.getrating());
+        return mv.getname()+" \t "+mv.getdirector()+" \t "+mv.getrating();
     }
 
     public String customerlogin(customer[] cus,String username,String password) {
@@ -87,6 +84,14 @@ public class library {
             else
             return null;
 
+    }
+
+    public void setpermission(String s) {
+          permission=s;
+    }
+
+    public String getpermission() {
+        return  permission;
     }
 }
 

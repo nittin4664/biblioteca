@@ -8,6 +8,7 @@ package com.twu28.biblioteca;
  * To change this template use File | Settings | File Templates.
  */
 public class book {
+    private
     String name; //name of the book
     int count; // no of books in the library
     public book(String name1, int count1)//constructor to assign values
@@ -28,10 +29,16 @@ public class book {
     }
 
 
+    public void reducebook() {
+        count--;
+    }
 
-
-
-
+    public boolean available() {
+        if(count>0)
+        return true;
+        else
+        return false;
+    }
 }
 
 

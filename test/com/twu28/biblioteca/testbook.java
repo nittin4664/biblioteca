@@ -26,6 +26,20 @@ public class testbook {
         {
             assertEquals(1,new book("ac",1).getcount());
         }
+    @Test
+    // to test getcount
+    public void testavailability()
+    {
+        assertEquals(true,new book("ac",1).available());
+    }
+
+    @Test
+    // to test getcount
+    public void testreducecount()
+    {    book book=new book("ac",2);
+        book.reducebook();
+        assertEquals(1,book.getcount());
+    }
 
 
 
